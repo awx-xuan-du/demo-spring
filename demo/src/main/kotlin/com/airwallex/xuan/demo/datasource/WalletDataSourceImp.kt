@@ -56,6 +56,7 @@ class WalletDataSourceImp(): WalletDataSource {
     }
 
     override fun transaction(departureId: Int, destinationId: Int, transactionAmount: Int): Status {
+
         if (!wallets.containsKey(departureId)) {
             throw NoSuchElementException("Could not find a wallet with account id $departureId")
         }
